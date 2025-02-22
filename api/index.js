@@ -1,9 +1,12 @@
+// filepath: /c:/Users/user/Desktop/testing/functions/index.js
+
 import { createServer } from 'http';
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from 'cookie-parser';
 import connectDB from "./config/mongo.js";
-import userRoutes from './routes/userRoutes.js';
+import userRoutes from './routes/user-routes.js';
+import { https } from 'firebase-functions';
 
 dotenv.config();
 
@@ -48,3 +51,5 @@ async function connect() {
   }
 }
 connect();
+
+export const api = https.onRequest(app);
