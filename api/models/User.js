@@ -1,3 +1,5 @@
+// filepath: /c:/Users/user/Desktop/testing/api/models/User.js
+
 import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
@@ -7,8 +9,15 @@ const userSchema = new mongoose.Schema({
     unique: true
   },
   password: {
+    type: String
+  },
+  googleId: {
     type: String,
-    required: true
+    unique: true
+  },
+  email: {
+    type: String,
+    unique: true
   }
 });
 
