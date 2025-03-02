@@ -19,6 +19,7 @@
     "firebase-function": "^1.4.121",
     "mongoose": "^8.10.1",
     "passport": "^0.7.0",
+    "passport-facebook": "^3.0.0",
     "passport-google-oauth20": "^2.0.0"
   }
 }
